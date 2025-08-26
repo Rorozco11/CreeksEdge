@@ -68,9 +68,9 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`relative px-6 py-3 rounded-full font-medium text-gray-700 transition-all duration-300 hover:text-green-700 hover:bg-green-50 ${
+                className={`relative px-6 py-3 rounded-full font-medium text-gray-700 transition-all duration-300 hover:text-green-700 ${
                   activeLink === link.name 
-                    ? 'text-green-700 bg-green-50 shadow-sm' 
+                    ? 'text-green-700 ' 
                     : ''
                 }`}
               >
