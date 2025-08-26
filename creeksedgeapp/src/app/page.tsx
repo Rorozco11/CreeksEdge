@@ -51,30 +51,45 @@ export default function Home() {
             </div>
           ))}
           
-          {/* Text overlay - simple approach */}
-          <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center bg-transparent">
-            <div className="text-6xl font-bold text-white mb-4 font-sans drop-shadow-lg px-8 py-4 rounded-lg">
-              <span className="px-4 py-2 rounded">
-               Creek's Edge
-              </span>
+          {/* Text overlay - modern design approach */}
+          <div className="absolute inset-0 flex items-center justify-center z-20">
+            <div className="text-center max-w-4xl mx-auto px-4 sm:px-8">
+              {/* Main title with elegant styling */}
+              <div className="mb-6 sm:mb-8">
+                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white font-serif tracking-tight drop-shadow-2xl mb-3 sm:mb-4">
+                  Creek's Edge
+                </h1>
+                <div className="w-16 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-gradient-to-r from-green-400 to-emerald-600 mx-auto rounded-full shadow-lg"></div>
+              </div>
+              
+              {/* Subtitle with sophisticated backdrop */}
+              <div className="relative">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light italic tracking-wide px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-white via-green-100 to-white bg-clip-text text-transparent drop-shadow-lg">
+                  Bring Paradise to you
+                </p>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="flex justify-center items-center mt-8 sm:mt-10 md:mt-12 space-x-2 sm:space-x-3 md:space-x-4">
+                <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white rounded-full opacity-60"></div>
+                <div className="w-1 h-1 bg-white rounded-full opacity-40"></div>
+                <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white rounded-full opacity-60"></div>
+              </div>
             </div>
-            <p className="text-2xl text-white italic font-sans px-6 py-2 rounded-lg">
-              <span className="px-3 py-1 rounded">
-                Bring Paradise to you
-              </span>
-            </p>
           </div>
+
+          
 
           
 
         
           {/* Image indicators - positioned at bottom */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3 z-20">
             {images.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full transition-all duration-300 ${
                   index === currentImageIndex 
                     ? 'bg-white scale-125' 
                     : 'bg-white bg-opacity-50 hover:bg-opacity-75'
@@ -84,6 +99,60 @@ export default function Home() {
           </div>
         </div>
       </main>
+     
+     {/* Learn the Land & Our Mission Section */}
+     <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-amber-50">
+       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+           {/* Learn the Land Card */}
+           <div className="group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+             <div className="h-48 sm:h-56 md:h-64 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
+               <div className="text-center text-white">
+                 <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4 opacity-80">🌲</div>
+                 <h3 className="text-xl sm:text-2xl font-bold">Learn the Land</h3>
+               </div>
+             </div>
+             <div className="p-6 sm:p-8">
+               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 font-serif">Learn the Land</h3>
+               <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                 Discover the rich natural heritage of New England landscapes. From ancient white pines to native wildflowers, 
+                 understand the ecological diversity that makes this region unique.
+               </p>
+               <a 
+                 href="/mission" 
+                 className="inline-block bg-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold hover:bg-green-700 transform transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+               >
+                 Learn more
+               </a>
+             </div>
+           </div>
+           
+           {/* Our Mission Card */}
+           <div className="group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+             <div className="h-48 sm:h-56 md:h-64 bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center">
+               <div className="text-center text-white">
+                 <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4 opacity-80">🎯</div>
+                 <h3 className="text-xl sm:text-2xl font-bold">Our Mission</h3>
+               </div>
+             </div>
+             <div className="p-6 sm:p-8">
+               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 font-serif">Our Mission</h3>
+               <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                 We're dedicated to re-integrating historic New England landscapes into modern properties. 
+                 Creating sustainable ecosystems that bring paradise to your doorstep.
+               </p>
+               <a 
+                 href="/mission" 
+                 className="inline-block bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold hover:bg-blue-700 transform transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+               >
+                 Learn more
+               </a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+     
       <Footer />
     </>
   );
