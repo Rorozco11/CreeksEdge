@@ -1,10 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
 const Navbar = () => {
+  const pathname = usePathname();
   const [activeLink, setActiveLink] = useState('Home');
+
+  useEffect(() => {
+    // Set active link based on current pathname
+    const currentLink = navLinks.find(link => link.href === pathname);
+    if (currentLink) {
+      setActiveLink(currentLink.name);
+    }
+  }, [pathname]);
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -40,7 +51,6 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setActiveLink(link.name)}
                 className={`text-gray-800 font-medium text-lg transition-colors duration-200 hover:text-blue-600 ${
                   activeLink === link.name 
                     ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 

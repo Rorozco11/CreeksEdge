@@ -29,8 +29,6 @@ export default function Home() {
   return (
     <>
         <Navbar />
-
-
       <main className="relative min-h-screen pt-20 bg-gray-900">
         {/* Full-screen slideshow container */}
         <div className="relative w-full h-screen">
