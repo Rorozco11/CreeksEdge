@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
@@ -10,6 +10,13 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('Home');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = useMemo(() => [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Our Mission', href: '/mission' },
+    { name: 'About Us', href: '/about' }
+  ], []);
 
   useEffect(() => {
     // Set active link based on current pathname
@@ -25,14 +32,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [pathname]);
-
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Our Mission', href: '/mission' },
-    { name: 'About Us', href: '/about' }
-  ];
+  }, [pathname, navLinks]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -57,7 +57,7 @@ const Navbar = () => {
               <div className="w-16 h-16 bg-gradient-to-br rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
                 <Image 
                   src="/images/logo.png" 
-                  alt="Creek's Edge Logo" 
+                  alt="Creek&apos;s Edge Logo" 
                   width={48} 
                   height={48}
                   className="object-contain mix-blend-multiply"
@@ -66,7 +66,7 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-600/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-900 font-serif">Creek's Edge</h1>
+              <h1 className="text-xl font-bold text-gray-900 font-serif">Creek&apos;s Edge</h1>
               <p className="text-xs text-gray-600 font-medium tracking-wide">LANDSCAPE ARCHITECTURE</p>
             </div>
           </div>
