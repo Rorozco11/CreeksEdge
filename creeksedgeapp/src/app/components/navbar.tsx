@@ -9,6 +9,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const [activeLink, setActiveLink] = useState('Home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Set active link based on current pathname
@@ -32,6 +33,14 @@ const Navbar = () => {
     { name: 'Our Mission', href: '/mission' },
     { name: 'About Us', href: '/about' }
   ];
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -97,7 +106,10 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors duration-200">
+            <button 
+              onClick={toggleMobileMenu}
+              className="p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
+            >
               <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -105,6 +117,39 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden">
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+            onClick={closeMobileMenu}
+          ></div>
+          
+          {/* Mobile Menu */}
+          <div className="fixed top-20 left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl border-b border-gray-100 z-50 transform transition-all duration-300">
+            <div className="px-6 py-4">
+              <div className="space-y-2">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                      activeLink === link.name 
+                        ? 'text-green-700 bg-green-50 border-l-4 border-green-400' 
+                        : 'text-gray-700 hover:text-green-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
