@@ -9,7 +9,7 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-      { src: '/images/image5.png', alt: 'Creek\'s Edge Landscape 5' },
+    { src: '/images/image5.png', alt: 'Creek\'s Edge Landscape 5' },
   { src: '/images/image6.jpg', alt: 'Creek\'s Edge Landscape 6' },
   { src: '/images/image13.jpg', alt: 'Creek\'s Edge Landscape 13' },
   { src: '/images/image17.jpg', alt: 'Creek\'s Edge Landscape 17' },
@@ -28,6 +28,7 @@ export default function Home() {
 
   return (
     <>
+
         <Navbar />
       <main className="relative min-h-screen pt-20 ">
         {/* Full-screen slideshow container */}
@@ -46,7 +47,6 @@ export default function Home() {
                 className="object-cover"
                 priority={index === 0}
                 sizes="100vw"
-
               />
             </div>
           ))}

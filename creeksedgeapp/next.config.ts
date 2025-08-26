@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
-    unoptimized: true, // Temporarily disable for Vercel compatibility
+    unoptimized: false, // Temporarily disable for Vercel compatibility
   },
   // Ensure static assets are properly served
   assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
