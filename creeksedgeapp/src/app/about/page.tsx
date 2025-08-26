@@ -9,8 +9,8 @@ export default function About() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const aboutImages = [
-    { src: '/images/sc5.jpg', alt: 'Creek\'s Edge Team at Work' },
-    { src: '/images/sc6.jpg', alt: 'Landscape Transformation' },
+    { src: '/images/sc6.jpg', alt: 'Creek\'s Edge Team at Work' },
+    { src: '/images/sc5.jpg', alt: 'Landscape Transformation' },
   ];
 
   const nextImage = () => {
@@ -46,7 +46,11 @@ export default function About() {
                   alt={aboutImages[currentImageIndex].alt}
                   width={800} 
                   height={800}
-                  className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`w-full transition-transform duration-500 group-hover:scale-105 ${
+                    aboutImages[currentImageIndex].src.includes('sc6.jpg') 
+                      ? 'h-96 sm:h-[28rem] md:h-[32rem] object-cover' 
+                      : 'h-64 sm:h-80 md:h-96 object-cover'
+                  }`}
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-base sm:text-lg font-semibold px-4 text-center">

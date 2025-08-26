@@ -159,11 +159,7 @@ export default function Services() {
                       <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
                         {service.descriptionPopup}
                       </p>
-                      <div className="mt-4 sm:mt-6">
-                        <button className={`bg-gradient-to-r ${getColorClasses(service.color)} text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold hover:shadow-lg transform transition-all duration-300 hover:scale-105 text-sm sm:text-base`}>
-                          Learn More
-                        </button>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>

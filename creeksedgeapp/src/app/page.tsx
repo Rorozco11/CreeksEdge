@@ -13,7 +13,7 @@ export default function Home() {
     { src: '/images/image6.jpg', alt: 'Creek\'s Edge Landscape 6' },
     { src: '/images/image13.jpg', alt: 'Creek\'s Edge Landscape 13' },
     { src: '/images/image17.jpg', alt: 'Creek\'s Edge Landscape 17' },
-    { src: '/images/image19.jpg', alt: 'Creek\'s Edge Landscape 19' },
+    { src: '/images/image7.jpg', alt: 'Creek\'s Edge Landscape 7' },
   ];
 
   useEffect(() => {
@@ -67,14 +67,7 @@ export default function Home() {
                 <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light italic tracking-wide px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-white via-green-100 to-white bg-clip-text text-transparent drop-shadow-lg">
                   Bring Paradise to you
                 </p>
-              </div>
-              
-              {/* Decorative elements */}
-              <div className="flex justify-center items-center mt-8 sm:mt-10 md:mt-12 space-x-2 sm:space-x-3 md:space-x-4">
-                <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white rounded-full opacity-60"></div>
-                <div className="w-1 h-1 bg-white rounded-full opacity-40"></div>
-                <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white rounded-full opacity-60"></div>
-              </div>
+              </div>      
             </div>
           </div>
 
@@ -106,12 +99,16 @@ export default function Home() {
          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
            {/* Learn the Land Card */}
            <div className="group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-             <div className="h-48 sm:h-56 md:h-64 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
-               <div className="text-center text-white">
-                 <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4 opacity-80">🌲</div>
-                 <h3 className="text-xl sm:text-2xl font-bold">Learn the Land</h3>
-               </div>
+             <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
+               <Image 
+                 src="/images/sc1.jpg" 
+                 alt="Learn the Land" 
+                 width={600} 
+                 height={400} 
+                 className="w-full h-full object-cover transition-transform duration-500" 
+               />
              </div>
+
              <div className="p-6 sm:p-8">
                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 font-serif">Learn the Land</h3>
                <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
@@ -119,7 +116,7 @@ export default function Home() {
                  understand the ecological diversity that makes this region unique.
                </p>
                <a 
-                 href="/mission" 
+                 href="/mission#learn-the-land" 
                  className="inline-block bg-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold hover:bg-green-700 transform transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                >
                  Learn more
@@ -130,10 +127,13 @@ export default function Home() {
            {/* Our Mission Card */}
            <div className="group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
              <div className="h-48 sm:h-56 md:h-64 bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center">
-               <div className="text-center text-white">
-                 <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4 opacity-80">🎯</div>
-                 <h3 className="text-xl sm:text-2xl font-bold">Our Mission</h3>
-               </div>
+             <Image 
+                 src="/images/image16.jpg" 
+                 alt="Our Mission" 
+                 width={600} 
+                 height={100} 
+                 className="w-full h-full object-cover transition-transform duration-500" 
+               />
              </div>
              <div className="p-6 sm:p-8">
                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 font-serif">Our Mission</h3>

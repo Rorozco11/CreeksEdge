@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Mission() {
   const [missionImageIndex, setMissionImageIndex] = useState(0);
@@ -14,13 +14,14 @@ export default function Mission() {
     { src: '/images/image8.jpg', alt: 'Mission image 2' },
     { src: '/images/image11.jpg', alt: 'Mission image 3' },
     { src: '/images/image20.jpg', alt: 'Mission image 4' },
+    { src: '/images/image16.jpg', alt: 'Mission image 4' },
   ];
 
   const landImages = [
-    { src: '/images/image14.png', alt: 'Learn the Land' },
-    { src: '/images/image8.jpg', alt: 'Land image 2' },
-    { src: '/images/image11.jpg', alt: 'Land image 3' },
-    { src: '/images/image20.jpg', alt: 'Land image 4' },
+    { src: '/images/sc4.jpg', alt: 'Learn the Land' },
+    { src: '/images/image14.png', alt: 'Land image 2' },
+
+  
   ];
 
   const nextMissionImage = () => {
@@ -30,6 +31,21 @@ export default function Mission() {
   const nextLandImage = () => {
     setLandImageIndex((prev) => (prev + 1) % landImages.length);
   };
+
+  // Handle scroll offset for anchor links
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const element = document.querySelector(window.location.hash);
+      if (element) {
+        const navbarHeight = 112; // Approximate navbar height (pt-28 = 7rem = 112px)
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - navbarHeight - 20, // Additional 20px offset for better spacing
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, []);
 
   return (
     <>
@@ -107,7 +123,7 @@ export default function Mission() {
           </div>
 
           {/* Learn the Land Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+          <div id="learn-the-land" className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
             <div className="relative order-2 lg:order-1 group cursor-pointer" onClick={nextLandImage}>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-cyan-600/20 rounded-xl sm:rounded-2xl transform -rotate-2 sm:-rotate-3 group-hover:-rotate-4 sm:group-hover:-rotate-6 transition-transform duration-300"></div>
               <div className="relative bg-white rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl overflow-hidden group-hover:shadow-2xl sm:group-hover:shadow-3xl transition-shadow duration-300">
