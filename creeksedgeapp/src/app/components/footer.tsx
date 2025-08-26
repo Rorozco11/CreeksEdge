@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="mb-6">
               <div className="w-24 h-24 mx-auto lg:mx-0 bg-white rounded-full flex items-center justify-center backdrop-blur-sm">
                 <Image
-                  src="/images/logo.png"
+                  src="//images/logo.png"
                   alt="Creek's Edge Logo"
                   width={80}
                   height={80}

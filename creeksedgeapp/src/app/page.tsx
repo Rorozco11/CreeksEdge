@@ -9,11 +9,11 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-      { src: 'images/image5.png', alt: 'Creek\'s Edge Landscape 5' },
-  { src: 'images/image6.jpg', alt: 'Creek\'s Edge Landscape 6' },
-  { src: 'images/image13.jpg', alt: 'Creek\'s Edge Landscape 13' },
-  { src: 'images/image17.jpg', alt: 'Creek\'s Edge Landscape 17' },
-  { src: 'images/image7.jpg', alt: 'Creek\'s Edge Landscape 7' },
+      { src: '/images/image5.png', alt: 'Creek\'s Edge Landscape 5' },
+  { src: '/images/image6.jpg', alt: 'Creek\'s Edge Landscape 6' },
+  { src: '/images/image13.jpg', alt: 'Creek\'s Edge Landscape 13' },
+  { src: '/images/image17.jpg', alt: 'Creek\'s Edge Landscape 17' },
+  { src: '/images/image7.jpg', alt: 'Creek\'s Edge Landscape 7' },
   ];
 
   useEffect(() => {
@@ -101,7 +101,7 @@ export default function Home() {
            <div className="group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
              <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
                <Image 
-                 src="images/sc1.jpg" 
+                 src="/images/sc1.jpg" 
                  alt="Learn the Land" 
                  width={600} 
                  height={400} 
@@ -128,7 +128,7 @@ export default function Home() {
            <div className="group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
              <div className="h-48 sm:h-56 md:h-64 bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center">
              <Image 
-                 src="images/image16.jpg" 
+                 src="/images/image16.jpg" 
                  alt="Our Mission" 
                  width={600} 
                  height={100} 
