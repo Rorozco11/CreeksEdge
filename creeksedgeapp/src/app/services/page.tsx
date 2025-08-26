@@ -173,7 +173,7 @@ export default function Services() {
               Ready to Transform Your Landscape?
             </h3>
             <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90">
-              Let's discuss how we can bring the natural beauty of New England to your property.
+              Let&apos;s discuss how we can bring the natural beauty of New England to your property.
             </p>
             <a 
               href="tel:203-848-0296" 

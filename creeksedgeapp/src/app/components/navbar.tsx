@@ -11,6 +11,13 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Our Mission', href: '/mission' },
+    { name: 'About Us', href: '/about' }
+  ];
+
   useEffect(() => {
     // Set active link based on current pathname
     const currentLink = navLinks.find(link => link.href === pathname);
@@ -18,21 +25,15 @@ const Navbar = () => {
       setActiveLink(currentLink.name);
     }
 
-    // Handle scroll effect
+  // Handle scroll effect
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
-
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Our Mission', href: '/mission' },
-    { name: 'About Us', href: '/about' }
-  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -66,7 +67,7 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-600/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-900 font-serif">Creek's Edge</h1>
+              <h1 className="text-xl font-bold text-gray-900 font-serif">Creek&apos;s Edge</h1>
               <p className="text-xs text-gray-600 font-medium tracking-wide">LANDSCAPE ARCHITECTURE</p>
             </div>
           </div>
