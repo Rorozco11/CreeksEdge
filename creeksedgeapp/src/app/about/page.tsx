@@ -79,7 +79,7 @@ export default function About() {
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
                   With over two years of dedicated experience in ecological restoration and landscape transformation, 
-                  we&apos;ve made it our mission to breathe new life into properties across New England. Our journey began 
+                  we've made it our mission to breathe new life into properties across New England. Our journey began 
                   with a simple yet powerful vision: to restore the natural balance that once thrived in this region.
                 </p>
               </div>
@@ -98,7 +98,7 @@ export default function About() {
               
               <div className="bg-green-50 border-l-4 border-green-400 p-4 sm:p-6 rounded-r-lg">
                 <p className="text-base sm:text-lg text-gray-800 font-medium">
-                  Our commitment extends beyond just landscaping—we&apos;re passionate about creating sustainable, 
+                  Our commitment extends beyond just landscaping—we're passionate about creating sustainable, 
                   thriving ecosystems that bring joy to our customers while contributing to the health of our planet.
                 </p>
               </div>
@@ -144,7 +144,7 @@ export default function About() {
               Ready to Transform Your Landscape?
             </h3>
             <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90">
-              Let&apos;s work together to create a beautiful, sustainable ecosystem that you&apos;ll love for years to come.
+              Let's work together to create a beautiful, sustainable ecosystem that you'll love for years to come.
             </p>
             <a 
               href="/services" 

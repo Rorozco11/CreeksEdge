@@ -14,15 +14,15 @@ const Footer = () => {
             <div className="mb-6">
               <div className="w-24 h-24 mx-auto lg:mx-0 bg-white rounded-full flex items-center justify-center backdrop-blur-sm">
                 <Image
-                  src="images/logo.png"
-                  alt="Creek&apos;s Edge Logo"
+                  src="/images/logo.png"
+                  alt="Creek's Edge Logo"
                   width={80}
                   height={80}
                   className="object-contain"
                 />
               </div>
             </div>
-            <h3 className="text-2xl font-bold font-serif mb-3">Creek&apos;s Edge</h3>
+            <h3 className="text-2xl font-bold font-serif mb-3">Creek's Edge</h3>
             <p className="text-gray-300 leading-relaxed">
               Bringing the historic New England landscape back to your property, 
               one sustainable ecosystem at a time.
@@ -77,7 +77,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">
-            © 2025 Creek&apos;s Edge. All rights reserved.
+            © 2025 Creek's Edge. All rights reserved.
           </p>
           
           {/* Social Media */}

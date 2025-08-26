@@ -24,7 +24,7 @@ export default function Home() {
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []);
 
   return (
     <>
@@ -57,7 +57,7 @@ export default function Home() {
               {/* Main title with elegant styling */}
               <div className="mb-6 sm:mb-8">
                 <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white font-serif tracking-tight drop-shadow-2xl mb-3 sm:mb-4">
-                  Creek&apos;s Edge
+                  Creek's Edge
                 </h1>
                 <div className="w-16 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-gradient-to-r from-green-400 to-emerald-600 mx-auto rounded-full shadow-lg"></div>
               </div>
@@ -138,7 +138,7 @@ export default function Home() {
              <div className="p-6 sm:p-8">
                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 font-serif">Our Mission</h3>
                <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                 We&apos;re dedicated to re-integrating historic New England landscapes into modern properties. 
+                 We're dedicated to re-integrating historic New England landscapes into modern properties. 
                  Creating sustainable ecosystems that bring paradise to your doorstep.
                </p>
                <a 

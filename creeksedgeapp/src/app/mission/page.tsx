@@ -69,10 +69,10 @@ export default function Mission() {
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-4 sm:space-y-6">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 font-serif">
-                  Re-integrating New England&apos;s Natural Heritage
+                  Re-integrating New England's Natural Heritage
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                  Our goal at Creeks Edge is to re-integrate the historic New England landscape back into our yards and lives. Our ecosystems are in distress! Complex ecological webs have been replaced by single-species deserts that require intense chemical and water use to keep &apos;pristine&apos;. We want to bring life back into our lawns.
+                  Our goal at Creeks Edge is to re-integrate the historic New England landscape back into our yards and lives. Our ecosystems are in distress! Complex ecological webs have been replaced by single-species deserts that require intense chemical and water use to keep 'pristine'. We want to bring life back into our lawns.
                 </p>
               </div>
               
