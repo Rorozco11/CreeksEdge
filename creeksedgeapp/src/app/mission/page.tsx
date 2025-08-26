@@ -10,16 +10,16 @@ export default function Mission() {
   const [landImageIndex, setLandImageIndex] = useState(0);
 
   const missionImages = [
-      { src: '/images/image21.jpg', alt: 'Our mission' },
-  { src: '/images/image8.jpg', alt: 'Mission image 2' },
-  { src: '/images/image11.jpg', alt: 'Mission image 3' },
-  { src: '/images/image20.jpg', alt: 'Mission image 4' },
-  { src: '/images/image16.jpg', alt: 'Mission image 4' },
+      { src: '/Images/image21.jpg', alt: 'Our mission' },
+  { src: '/Images/image8.jpg', alt: 'Mission image 2' },
+  { src: '/Images/image11.jpg', alt: 'Mission image 3' },
+  { src: '/Images/image20.jpg', alt: 'Mission image 4' },
+  { src: '/Images/image16.jpg', alt: 'Mission image 4' },
   ];
 
   const landImages = [
-      { src: '/images/sc4.jpg', alt: 'Learn the Land' },
-  { src: '/images/image14.png', alt: 'Land image 2' },
+      { src: '/Images/sc4.jpg', alt: 'Learn the Land' },
+  { src: '/Images/image14.png', alt: 'Land image 2' },
 
   
   ];

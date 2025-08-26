@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="relative group">
               <div className="w-16 h-16 bg-gradient-to-br rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
                 <Image 
-                  src="/images/logo.png" 
+                  src="/Images/logo.png" 
                   alt="Creek's Edge Logo" 
                   width={48} 
                   height={48}

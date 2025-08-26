@@ -100,16 +100,16 @@ export default function Services() {
                     {/* Background Image */}
                     <div className="h-48 sm:h-56 md:h-64 relative overflow-hidden">
                       {service.title === "Native Plant Design" ? (
-                        <Image src="/images/image12.jpg" alt="Native Plant Design" width={800} height={800} className="w-full h-full object-cover" />
+                        <Image src="/Images/image12.jpg" alt="Native Plant Design" width={800} height={800} className="w-full h-full object-cover" />
                       ) 
                       : service.title === "Invasive Species Removal" ? (
-                        <Image src="/images/image15.jpg" alt="Invasive Species Removal" width={800} height={800} className="w-full h-full object-cover" />
+                        <Image src="/Images/image15.jpg" alt="Invasive Species Removal" width={800} height={800} className="w-full h-full object-cover" />
                       )
                       : service.title === "Wildlife Pond" ? (
-                        <Image src="/images/image6.jpg" alt="Wildlife Pond" width={800} height={800} className="w-full h-full object-cover" />
+                        <Image src="/Images/image6.jpg" alt="Wildlife Pond" width={800} height={800} className="w-full h-full object-cover" />
                       )
                       : service.title === "Song Bird, Bat Boxes, and Owl Boxes" ? (
-                        <Image src="/images/image7.jpg" alt="Song Bird, Bat Boxes, and Owl Boxes" width={800} height={800} className="w-full h-full object-cover" />
+                        <Image src="/Images/image7.jpg" alt="Song Bird, Bat Boxes, and Owl Boxes" width={800} height={800} className="w-full h-full object-cover" />
                       )
                       : null
                       }

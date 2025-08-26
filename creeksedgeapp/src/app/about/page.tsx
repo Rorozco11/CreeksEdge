@@ -9,8 +9,8 @@ export default function About() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const aboutImages = [
-      { src: '/images/sc6.jpg', alt: 'Creek\'s Edge Team at Work' },
-  { src: '/images/sc5.jpg', alt: 'Landscape Transformation' },
+      { src: '/Images/sc6.jpg', alt: 'Creek\'s Edge Team at Work' },
+  { src: '/Images/sc5.jpg', alt: 'Landscape Transformation' },
   ];
 
   const nextImage = () => {
