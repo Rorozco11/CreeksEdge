@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
         <Navbar />
-      <main className="relative min-h-screen pt-20 bg-gray-900">
+      <main className="relative min-h-screen pt-20 ">
         {/* Full-screen slideshow container */}
         <div className="relative w-full h-screen">
           {images.map((image, index) => (
@@ -46,19 +46,26 @@ export default function Home() {
                 className="object-cover"
                 priority={index === 0}
                 sizes="100vw"
+
               />
             </div>
           ))}
           
           {/* Text overlay - simple approach */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center bg-transparent">
-            <div className="text-6xl font-bold text-white mb-4 font-serif drop-shadow-lg bg-transparent">
-              Creek's Edge
+          <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center bg-transparent">
+            <div className="text-6xl font-bold text-white mb-4 font-sans drop-shadow-lg px-8 py-4 rounded-lg">
+              <span className="px-4 py-2 rounded">
+               Creek's Edge
+              </span>
             </div>
-            <p className="text-2xl text-white italic drop-shadow-lg">
-              Bring Paradise to you
+            <p className="text-2xl text-white italic font-sans px-6 py-2 rounded-lg">
+              <span className="px-3 py-1 rounded">
+                Bring Paradise to you
+              </span>
             </p>
           </div>
+
+          
 
         
           {/* Image indicators - positioned at bottom */}
