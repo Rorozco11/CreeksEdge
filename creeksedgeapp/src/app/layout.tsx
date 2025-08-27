@@ -16,31 +16,17 @@ export const metadata: Metadata = {
   title: "Creek's Edge Landscape",
   description: "Bring Paradise to you - Professional landscape design and services in New England",
   icons: {
-    icon: [
-      {
-        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌳</text></svg>',
-        type: 'image/svg+xml',
-      },
-    ],
-    shortcut: [
-      {
-        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌳</text></svg>',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: [
-      {
-        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌳</text></svg>',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/favIcon.ico',
+    shortcut: '/favIcon.ico',
+    apple: '/apple-touch-icon.png',
   },
+  manifest: '/site.webmanifest',
   openGraph: {
     title: "Creek's Edge Landscape",
     description: "Bring Paradise to you - Professional landscape design and services in New England",
     images: [
       {
-        url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌳</text></svg>',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: "Creek's Edge Landscape",
@@ -51,9 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Creek's Edge Landscape",
     description: "Bring Paradise to you - Professional landscape design and services in New England",
-    images: [
-      'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌳</text></svg>',
-    ],
+    images: ['/og-image.png'],
   },
 };
 
