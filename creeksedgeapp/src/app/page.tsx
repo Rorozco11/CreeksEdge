@@ -9,11 +9,11 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-    { src: '/images/image5.png', alt: 'Creek\'s Edge Landscape 5' },
-    { src: '/images/image6.jpg', alt: 'Creek\'s Edge Landscape 6' },
-    { src: '/images/image13.jpg', alt: 'Creek\'s Edge Landscape 13' },
-    { src: '/images/image17.jpg', alt: 'Creek\'s Edge Landscape 17' },
-    { src: '/images/image7.jpg', alt: 'Creek\'s Edge Landscape 7' },
+    { src: '/Images/image5.png', alt: 'Creek\'s Edge Landscape 5' },
+  { src: '/Images/image6.jpg', alt: 'Creek\'s Edge Landscape 6' },
+  { src: '/Images/image13.jpg', alt: 'Creek\'s Edge Landscape 13' },
+  { src: '/Images/image17.jpg', alt: 'Creek\'s Edge Landscape 17' },
+  { src: '/Images/image7.jpg', alt: 'Creek\'s Edge Landscape 7' },
   ];
 
   useEffect(() => {
@@ -28,6 +28,7 @@ export default function Home() {
 
   return (
     <>
+
         <Navbar />
       <main className="relative min-h-screen pt-20 ">
         {/* Full-screen slideshow container */}
@@ -46,17 +47,16 @@ export default function Home() {
                 className="object-cover"
                 priority={index === 0}
                 sizes="100vw"
-
               />
             </div>
           ))}
           
           {/* Text overlay - modern design approach */}
-          <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="absolute inset-0 flex items-center justify-center z-20 -mt-64 sm:mt-0">
             <div className="text-center max-w-4xl mx-auto px-4 sm:px-8">
               {/* Main title with elegant styling */}
               <div className="mb-6 sm:mb-8">
-                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white font-serif tracking-tight drop-shadow-2xl mb-3 sm:mb-4">
+                <h1 className="text-[52px] sm:text-7xl md:text-7xl lg:text-8xl font-bold text-white font-serif tracking-tight drop-shadow-2xl mb-3 sm:mb-4">
                   Creek&apos;s Edge
                 </h1>
                 <div className="w-16 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-gradient-to-r from-green-400 to-emerald-600 mx-auto rounded-full shadow-lg"></div>
@@ -64,7 +64,7 @@ export default function Home() {
               
               {/* Subtitle with sophisticated backdrop */}
               <div className="relative">
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light italic tracking-wide px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-white via-green-100 to-white bg-clip-text text-transparent drop-shadow-lg">
+                <p className="text-[26px] sm:text-2xl md:text-3xl lg:text-4xl font-light italic tracking-wide px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-white via-green-100 to-white bg-clip-text text-transparent drop-shadow-lg">
                   Bring Paradise to you
                 </p>
               </div>      
@@ -101,7 +101,7 @@ export default function Home() {
            <div className="group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
              <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
                <Image 
-                 src="/images/sc1.jpg" 
+                 src="/Images/sc1.jpg" 
                  alt="Learn the Land" 
                  width={600} 
                  height={400} 
@@ -128,7 +128,7 @@ export default function Home() {
            <div className="group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
              <div className="h-48 sm:h-56 md:h-64 bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center">
              <Image 
-                 src="/images/image16.jpg" 
+                 src="/Images/image16.jpg" 
                  alt="Our Mission" 
                  width={600} 
                  height={100} 

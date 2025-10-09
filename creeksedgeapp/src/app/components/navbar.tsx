@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
@@ -11,12 +11,12 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navLinks = useMemo(() => [
+  const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Our Mission', href: '/mission' },
     { name: 'About Us', href: '/about' }
-  ], []);
+  ];
 
   useEffect(() => {
     // Set active link based on current pathname
@@ -25,14 +25,15 @@ const Navbar = () => {
       setActiveLink(currentLink.name);
     }
 
-    // Handle scroll effect
+  // Handle scroll effect
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [pathname, navLinks]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -56,8 +57,8 @@ const Navbar = () => {
             <div className="relative group">
               <div className="w-16 h-16 bg-gradient-to-br rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
                 <Image 
-                  src="/images/logo.png" 
-                  alt="Creek&apos;s Edge Logo" 
+                  src="/Images/logo.png" 
+                  alt="Creek's Edge Logo" 
                   width={48} 
                   height={48}
                   className="object-contain mix-blend-multiply"
