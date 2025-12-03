@@ -9,11 +9,12 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const images = [
-    { src: '/Images/image5.png', alt: 'Creek\'s Edge Landscape 5' },
-  { src: '/Images/image6.jpg', alt: 'Creek\'s Edge Landscape 6' },
+  { src: '/Images/grass.JPEG', alt: 'Creek\'s Edge Landscape 7' },
+  { src: '/Images/image5.png', alt: 'Creek\'s Edge Landscape 5' },
+  { src: '/Images/pond.JPEG', alt: 'Creek\'s Edge Landscape 6' },
   { src: '/Images/image13.jpg', alt: 'Creek\'s Edge Landscape 13' },
   { src: '/Images/image17.jpg', alt: 'Creek\'s Edge Landscape 17' },
-  { src: '/Images/image7.jpg', alt: 'Creek\'s Edge Landscape 7' },
+  { src: '/Images/newFlower.JPEG', alt: 'Creek\'s Edge Landscape 18' },
   ];
 
   useEffect(() => {

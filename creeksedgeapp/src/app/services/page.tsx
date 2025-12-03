@@ -9,7 +9,6 @@ interface Service {
   title: string;
   description: string;
   descriptionPopup: string;
-  icon: string;
   color: string;
 }
 
@@ -21,28 +20,24 @@ export default function Services() {
       title: "Native Plant Design",
       description: "We work to bring the beautiful new england aesthetic back to your home, with the plants that have thrived here for centuries!",
       descriptionPopup: "Pollinator meadows, rain gardens, and food forests are all encompassing in our native plant design and installation. our work is centered around getting rid of invasive plants that are from other countries and can aggressively take over landscapes. Removing invasive species will give opportunities for native species to out compete and rejuvenate New England landscape.",
-      icon: "🌱",
       color: "green"
     },
     {
       title: "Invasive Species Removal",
       description: "Mechanical removal, Foliar spraying, Cut & Dab treatment, basal bark application.",
       descriptionPopup: "Invasive plants are everywhere in New England, coming from many other countries across the world and acting as very aggressive plants. The aggressiveness of these species can prevent the health and growth of our New England native plants as well as decrease food sources for our native fauna. between hand pulling, digging out and chemical treatment we are on a mission to help you remove species which are aggressive and non native from your landscape.",
-      icon: "🌿",
       color: "emerald"
     },
     {
       title: "Wildlife Pond",
       description: "Add a true oasis to your backyard! Waterfalls, ponds and water features bring aesthetics and a soothing calm.",
       descriptionPopup: "Along with a cool escape from the summer heat, a pond can be a true hotspot for amphibians, songbirds, and dragonflies, all important pest predators. Attracting these types of critters will start to keep away the unwanted pests such as ticks and mosquitoes due to a prime food source and habitat provided for them. Moving waters create a background noise that is relaxing and will keep the water clean of pests and algae.",
-      icon: "💧",
       color: "blue"
     },
     {
       title: "Song Bird, Bat Boxes, and Owl Boxes",
       description: "We work to bring the beautiful new england aesthetic back to your home, with the plants that have thrived here for centuries!",
       descriptionPopup: "Providing habitat for our wild friends is very beneficial due to lots of damage being done to trees in which they live in naturally. Giving a home for these species can separate them from critters who are also trying to use trees as homes. One of the most common habitats for birds, bats and owls are hollowed out trees which can be very vulnerable to storm damage and with that can be very dangerous not only to your family and home but dangerous to the animals. Giving them external home will let others know there is something using this space as a home which means it should not be altered as well as eliminating some of those dangers.",
-      icon: "🦉",
       color: "amber"
     }
   ];
@@ -66,8 +61,7 @@ export default function Services() {
       <Navbar />
       
       {/* Hero Section */}
-      <div className="relative min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-amber-50 pt-28">
-        <div className="absolute inset-0 bg-black/5"></div>
+      <div className="relative min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-amber-50 pt-24">
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
           
           {/* Page Header */}
@@ -87,8 +81,8 @@ export default function Services() {
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className={`bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-gray-100 transition-all duration-500 ${
-                  expandedService === index ? 'shadow-2xl scale-[1.01] sm:scale-[1.02]' : 'hover:shadow-xl hover:scale-[1.005] sm:hover:scale-[1.01]'
+                className={`bg-white rounded-xl sm:rounded-2xl shadow-md overflow-hidden border border-gray-200 transition-all duration-300 ${
+                  expandedService === index ? 'shadow-xl border-gray-300' : 'hover:shadow-lg hover:border-gray-300'
                 }`}
               >
                 {/* Service Header */}
@@ -106,7 +100,7 @@ export default function Services() {
                         <Image src="/Images/image15.jpg" alt="Invasive Species Removal" width={800} height={800} className="w-full h-full object-cover" />
                       )
                       : service.title === "Wildlife Pond" ? (
-                        <Image src="/Images/image6.jpg" alt="Wildlife Pond" width={800} height={800} className="w-full h-full object-cover" />
+                        <Image src="/Images/pond.JPEG" alt="Wildlife Pond" width={800} height={800} className="w-full h-full object-cover" />
                       )
                       : service.title === "Song Bird, Bat Boxes, and Owl Boxes" ? (
                         <Image src="/Images/image7.jpg" alt="Song Bird, Bat Boxes, and Owl Boxes" width={800} height={800} className="w-full h-full object-cover" />
@@ -114,13 +108,13 @@ export default function Services() {
                       : null
                       }
                       {/* Gradient Overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-r ${getColorClasses(service.color)} opacity-20`}></div>
+                      <div className={`absolute inset-0 bg-gradient-to-r ${getColorClasses(service.color)} opacity-30`}></div>
+                      <div className="absolute inset-0 bg-black/20"></div>
                       
-                      {/* Icon and Title */}
+                      {/* Title */}
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center text-white">
-                          <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4 drop-shadow-lg">{service.icon}</div>
-                          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif drop-shadow-lg px-4">
+                          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif drop-shadow-2xl px-4">
                             {service.title}
                           </h3>
                         </div>
@@ -128,11 +122,11 @@ export default function Services() {
                       
                       {/* Expand/Collapse Indicator */}
                       <div className="absolute top-4 sm:top-6 right-4 sm:right-6">
-                        <div className={`w-8 sm:w-10 h-8 sm:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-transform duration-300 ${
-                          expandedService === index ? 'rotate-180' : ''
+                        <div className={`w-10 sm:w-12 h-10 sm:h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 shadow-lg ${
+                          expandedService === index ? 'rotate-180 bg-white' : 'hover:bg-white'
                         }`}>
-                          <svg className="w-4 sm:w-5 h-4 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <svg className="w-5 sm:w-6 h-5 sm:h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                           </svg>
                         </div>
                       </div>
@@ -140,8 +134,8 @@ export default function Services() {
                   </div>
                   
                   {/* Service Preview */}
-                  <div className="p-6 sm:p-8">
-                    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                  <div className="p-8 sm:p-10">
+                    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
                       {service.description}
                     </p>
                   </div>

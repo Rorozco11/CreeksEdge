@@ -18,8 +18,8 @@ export default function Mission() {
   ];
 
   const landImages = [
-      { src: '/Images/sc4.jpg', alt: 'Learn the Land' },
-  { src: '/Images/image14.png', alt: 'Land image 2' },
+    { src: '/Images/walkway.JPEG', alt: 'Land image 2' },
+    { src: '/Images/sc4.jpg', alt: 'Learn the Land' },
 
   
   ];
